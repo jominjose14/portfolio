@@ -1,16 +1,13 @@
 import './style.css';
 import { projects } from "./projects-list.js";
-import {
-    initDarkLightMode,
-    attachEventHandler as addDarkLightToggleListener,
-} from "./utils.js";
+import { initDarkLightMode } from "./utils.js";
 import type { Project, ProjectTile } from './types.js';
 
 window.onload = (): void => {
     initDarkLightMode();
-    addDarkLightToggleListener();
     loadProjects();
     addEventListeners();
+    autoOpenModal();
 };
 
 function addEventListeners(): void {
@@ -22,7 +19,7 @@ function addEventListeners(): void {
 
 function loadProjects(): void {
     const parser = new DOMParser();
-    const projectsBox = document.querySelector(".box.index")!;
+    const projectsBox = document.querySelector(".grid-box")!;
 
     projects.forEach((project: Project) => {
         const {
@@ -37,19 +34,20 @@ function loadProjects(): void {
         } = project;
         const doc = parser.parseFromString(
             `
-        <div
-          class="tile"
-          data-about="${about}"
-          data-tech="${tech}"
-          ${webApp ? `data-web-app="${webApp}"` : ""}
-          ${demoVideo ? `data-demo-video="${demoVideo}"` : ""}
-          ${download ? `data-download="${download}"` : ""}
-          ${sourceCode ? `data-source-code="${sourceCode}"` : ""}
-        >
-          <img src="${image}" alt="${name}" />
-          <div class="title">${name}</div>
-        </div>
-      `,
+            <div
+                class="tile"
+                data-name="${name}"
+                data-about="${about}"
+                data-tech="${tech}"
+                ${webApp ? `data-web-app="${webApp}"` : ""}
+                ${demoVideo ? `data-demo-video="${demoVideo}"` : ""}
+                ${download ? `data-download="${download}"` : ""}
+                ${sourceCode ? `data-source-code="${sourceCode}"` : ""}
+            >
+            <img src="${image}" alt="${name}" />
+            <div class="title">${name}</div>
+            </div>
+            `,
             "text/html"
         );
         projectsBox.appendChild(doc.body.firstChild!);
@@ -75,7 +73,7 @@ export function openProjectModal(event: Event) {
     const tile: ProjectTile = target.closest(".tile") as ProjectTile;
     const img = tile!.querySelector("img")!.cloneNode();
     const {
-        dataset: { about, tech, webApp, demoVideo, download, sourceCode },
+        dataset: { name, about, tech, webApp, demoVideo, download, sourceCode },
     } = tile;
 
     const projectDialog: HTMLDialogElement = document.getElementById("project-dialog") as HTMLDialogElement;
@@ -84,7 +82,8 @@ export function openProjectModal(event: Event) {
     imgBox.innerHTML = "";
     imgBox.appendChild(img);
 
-    projectDialog.querySelector(".about")!.textContent = about as string;
+    const projectAbout = name + ": " + about;
+    projectDialog.querySelector(".about")!.textContent = projectAbout as string;
 
     const techContainer = projectDialog.querySelector(".tech")!;
     techContainer.innerHTML = "";
@@ -102,6 +101,15 @@ export function openProjectModal(event: Event) {
     if (sourceCode) createAnchor("Source Code", sourceCode, "github", links);
 
     projectDialog.showModal();
+}
+
+function autoOpenModal() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let nameParam = urlParams.get('name');
+    if (nameParam === null) return;
+
+    const tile: HTMLDivElement = document.querySelector(`.tile[data-name='${nameParam}']`) as HTMLDivElement;
+    tile.click();
 }
 
 export function closeModal(event: Event) {

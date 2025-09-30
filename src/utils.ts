@@ -7,9 +7,10 @@ export function initDarkLightMode(): void {
         document.documentElement.classList.remove("dark-mode");
         document.documentElement.classList.add("light-mode");
     }
+    addDarkLightToggleHandler();
 }
 
-export function attachEventHandler() {
+function addDarkLightToggleHandler() {
     document
         .querySelector(".dark-light-switch")!
         .addEventListener("click", toggleDarkLightMode);
