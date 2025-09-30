@@ -33,7 +33,7 @@ export const projects: Project[] = [
         image: "sleepywheels.jpg",
         about: "A driver drowsiness detection system that alerts the driver before they fall asleep",
         tech: "python,cnn,efficientnetv2,keras,node,postgresql",
-        webApp: "http://jominjose.42web.io/dashboard.php?i=1",
+        webApp: "https://sleepywheels.vercel.app/",
         demoVideo: "https://www.youtube.com/watch?v=KaCROQi2XRs",
         sourceCode: "https://github.com/jominjose14/SleepyWheels",
     },
