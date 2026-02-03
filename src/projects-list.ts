@@ -29,6 +29,13 @@ export const projects: Project[] = [
         sourceCode: "https://github.com/jominjose14/apparelkart",
     },
     {
+        name: "Story Builder",
+        image: "story-builder.png",
+        about: "A web service that ingests football squad and match data to create a JSON pack of match highlights",
+        tech: "node.js,typescript,html,css,javascript",
+        sourceCode: "https://github.com/jominjose14/story-builder",
+    },
+    {
         name: "SleepyWheels",
         image: "sleepywheels.jpg",
         about: "A driver drowsiness detection system that alerts the driver before they fall asleep",
@@ -41,7 +48,7 @@ export const projects: Project[] = [
         name: "The Wild Oasis",
         image: "the-wild-oasis.png",
         about: "A hotel management web app to manage cabins, bookings & checkouts",
-        tech: "react,react-router,tailwindcss,node,postgresql",
+        tech: "react,react-router,styled components,tanstack query,react hook forms,supabase",
         webApp: "https://the-wild-oasis-mgmt.vercel.app",
         demoVideo: "https://youtu.be/vajksh7zW9M",
         sourceCode: "https://github.com/jominjose14/the-wild-oasis",
