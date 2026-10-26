@@ -1,95 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio | Home</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/style.css" />
-    <script type="module" defer src="./src/index.ts"></script>
-  </head>
 
-  <body>
-    <main>
-      <header>Portfolio</header>
+<head>
+  <title>Portfolio | Home</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" defer src="./src/index.ts"></script>
+</head>
 
-      <div class="grid-box">
-        <a
-          class="tile"
-          target="_blank"
-          href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link"
-        >
-          <img src="resume.svg" alt="Resume" />
-          <div class="title">Resume</div>
-        </a>
+<body>
+  <main>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./links.html">Links</a>
+      <a href="./projects.html">Projects</a>
+      <a href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link">Resume</a>
+    </nav>
 
-        <a class="tile" target="_blank" href="./projects.html">
-          <img src="rocket.svg" alt="Projects" />
-          <div class="title">Projects</div>
-        </a>
-
-        <a
-          class="tile"
-          target="_blank"
-          href="https://www.youtube.com/c/JominJose"
-        >
-          <img src="youtube-outline.svg" alt="YouTube" />
-          <div class="title">YouTube</div>
-        </a>
-
-        <a class="tile" target="_blank" href="http://jominjose14.blogspot.com/">
-          <img src="write.svg" alt="Blog" />
-          <div class="title">Blog</div>
-        </a>
-
-        <a
-          class="tile"
-          target="_blank"
-          href="https://www.linkedin.com/in/jominjose14/"
-        >
-          <img src="linkedin.svg" alt="LinkedIn" />
-          <div class="title">LinkedIn</div>
-        </a>
-
-        <a class="tile" target="_blank" href="https://github.com/jominjose14">
-          <img src="github-black.svg" alt="GitHub" />
-          <div class="title">GitHub</div>
-        </a>
-
-        <a
-          class="tile"
-          target="_blank"
-          href="https://x.com/jomin_jose14"
-        >
-          <img src="x.svg" alt="X (Twitter)" />
-          <div class="title">X.com</div>
-        </a>
-
-        <a
-          class="tile"
-          target="_blank"
-          href="https://www.instagram.com/jomin__jose/"
-        >
-          <img src="instagram.svg" alt="Instagram" />
-          <div class="title">Instagram (Personal)</div>
-        </a>
-
-        <a
-          class="tile"
-          target="_blank"
-          href="https://www.instagram.com/jominjose7/"
-        >
-          <img src="music.svg" alt="Instagram Music" />
-          <div class="title">Instagram (Music)</div>
-        </a>
+    <section class="hero-section">
+      <div class="left">
+        <img height="130" width="110" src="portrait.jpg" alt="portrait of candidate">
       </div>
-    </main>
-    <div class="dark-light-switch" onclick="toggleDarkLightMode()">
-      <img src="sun.svg" alt="Light Mode" />
-    </div>
-  </body>
+      <div class="right">
+        <div class="name">Jomin Jose</div>
+        <div class="profession">Full Stack Engineer / Software Engineer</div>
+        <div class="intro">
+          <ul>
+            <li>Strong expertise in building scalable distributed systems, full-stack
+              applications, and real-time platforms
+            </li>
+            <li>
+              Philomath of system design, distributed microservice architecture, and
+              agile development
+            </li>
+            <li>
+              Passionate problem solver with 1000+ algorithmic challenges solved across LeetCode, InterviewBit, SPOJ
+            </li>
+          </ul>
+        </div>
+        <div class="action">
+          <a href="./projects.html">
+            <button class="alt-btn">View my work</button>
+          </a>
+          <a href="mailto:jominjose14@gmail.com">
+            <button>Get in touch</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <a title="Resume" href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link">
+        <button class="link-tile">
+          <img src="resume.svg" alt="resume">
+        </button>
+      </a>
+      <a title="Projects" href="./projects.html">
+        <button class="link-tile">
+          <img src="rocket.svg" alt="projects">
+        </button>
+      </a>
+      <a title="Linkedin" href="https://www.linkedin.com/in/jominjose14/">
+        <button class="link-tile">
+          <img src="linkedin.svg" alt="linkedin">
+        </button>
+      </a>
+      <a title="GitHub" href="https://github.com/jominjose14">
+        <button class="link-tile">
+          <img src="github-black.svg" alt="github">
+        </button>
+      </a>
+    </section>
+
+    <section class="skills-section">
+      <div class="section-heading">
+        <span>Skills</span>
+        <hr>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">Languages</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="java.svg" alt="java">
+            <span>Java</span>
+          </div>
+          <div class="skill">
+            <img src="typescript.svg" alt="typescript">
+            <span>TypeScript</span>
+          </div>
+          <div class="skill">
+            <img src="golang.svg" alt="golang">
+            <span>Golang</span>
+          </div>
+          <div class="skill">
+            <img src="sql.svg" alt="sql">
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">Frameworks</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="react.svg" alt="react">
+            <span>React</span>
+          </div>
+          <div class="skill">
+            <img src="tailwindcss.svg" alt="tailwindcss">
+            <span>TailwindCSS</span>
+          </div>
+          <div class="skill">
+            <img src="nextjs.svg" alt="nextjs">
+            <span>Next.js</span>
+          </div>
+          <div class="skill">
+            <img src="nodejs.svg" alt="nodejs">
+            <span>NodeJS</span>
+          </div>
+          <div class="skill">
+            <img src="springboot.svg" alt="springboot">
+            <span>Spring Boot</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">Databases</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="postgresql.svg" alt="postgresql">
+            <span>PostgreSQL</span>
+          </div>
+          <div class="skill">
+            <img src="hbase.svg" alt="hbase">
+            <span>HBase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">Dev Tools</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="docker.svg" alt="docker">
+            <span>Docker</span>
+          </div>
+          <div class="skill">
+            <img src="kubernetes.svg" alt="kubernetes">
+            <span>Kubernetes</span>
+          </div>
+          <div class="skill">
+            <img src="kafka.svg" alt="kafka">
+            <span>Kafka</span>
+          </div>
+          <div class="skill">
+            <img src="redis.svg" alt="redis">
+            <span>Redis</span>
+          </div>
+          <div class="skill">
+            <img src="nginx.svg" alt="nginx">
+            <span>Nginx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">Testing Tools</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="junit.svg" alt="junit">
+            <span>JUnit</span>
+          </div>
+          <div class="skill">
+            <img src="vitest.svg" alt="vitest">
+            <span>Vitest</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="sub-section-heading">AI</div>
+        <div class="skill-group">
+          <div class="skill">
+            <img src="cnn.svg" alt="cnn">
+            <span>CNN</span>
+          </div>
+          <div class="skill">
+            <img src="nlp.svg" alt="nlp">
+            <span>NLP</span>
+          </div>
+          <div class="skill">
+            <img src="tensorflow.svg" alt="tensorflow">
+            <span>TensorFlow</span>
+          </div>
+          <div class="skill">
+            <img src="numpy.svg" alt="numpy">
+            <span>Numpy</span>
+          </div>
+          <div class="skill">
+            <img src="pandas.svg" alt="pandas">
+            <span>Pandas</span>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="section-heading">
+        <span>Projects</span>
+        <hr>
+      </div>
+
+      <div class="sub-section">
+        <a target="_blank" href="./projects.html?name=Peerpedia">
+          <button class="project-name alt-btn">Peerpedia</button>
+        </a>
+        <div class="project-summary">Barter-learning social media web app</div>
+        <div class="project-content">
+          <ul>
+            <li>Architected a barter-learning social media with dynamic skill-based matchmaking, scalable for upto 1
+              million active users</li>
+            <li>Implemented JWT auth, search engine, real-time chat, stats cron job &amp; 10+ more features; all read
+              queries take under 10ms</li>
+            <li>Integrated Generative AI (Gemini Flash 2.0 LLM) for automatic intelligent user bio generation based on
+              provided skills</li>
+            <li>Employed distributed architecture (containerized microservices) with response times under 50
+              milliseconds for all APIs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <a target="_blank" href="./projects.html?name=Goal">
+          <button class="project-name alt-btn">Goal</button>
+        </a>
+        <div class="project-summary">Real time multiplayer air hockey game (web app)</div>
+        <div class="project-content">
+          <ul>
+            <li>Engineered a real time remote multiplayer engine supporting 256 concurrent users (64 rooms) with &lt;
+              16ms
+              latency (60 FPS)</li>
+            <li>Created online mode (upto 4 remote players in same room) & offline mode against single/team of Easy,
+              Medium, Hard AIs</li>
+            <li>Employed HTTP & web sockets to implement features like host/join/leave room, communicating live
+              player/puck positions</li>
+            <li>Implemented robust rate limiting (sliding window) & memory limiting and cross-platform support (desktop,
+              tablet, smartphone)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <a target="_blank" href="./projects.html?name=ApparelKart">
+          <button class="project-name alt-btn">ApparelKart</button>
+        </a>
+        <div class="project-summary">Advanced ecommerce recommendation engine</div>
+        <div class="project-content">
+          <ul>
+            <li>Engineered a low-latency content-based recommendation engine and deployed it in action on a live
+              e-commerce platform</li>
+            <li>Optimized to scale upto 1 million products with results within 100 milliseconds and a remarkable 98%
+              accuracy rate</li>
+            <li>Curated a custom dataset using Amazon Product Advertising API, cleaned & filtered post Exploratory Data
+              Analysis</li>
+            <li>Applied Feature Engineering to create vector embeddings and compare them using Euclidian distance &
+              Cosine similarity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <a class="all-projects-link" href="./projects.html">View all projects →</a>
+      </div>
+    </section>
+
+    <section class="experience-section">
+      <div class="section-heading">
+        <span>Experience</span>
+        <hr>
+      </div>
+
+      <div class="sub-section">
+        <div class="job-meta"><b>Software Engineer</b> @ Coding Club &nbsp; | &nbsp; Jul 2023 - Present</div>
+        <div class="job-content">
+          <ul>
+            <li>Developed & managed Spring Boot backend, React frontend & AWS infrastructure, improving website
+              engagements by 30%</li>
+            <li>Architected an advanced hiring link aggregation platform using Golang, LLMs & N8N, increasing student
+              hiring rates by 60%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="job-meta"><b>Member Technical Staff</b> (Software Engineer) @ Zoho Corporation &nbsp; | &nbsp; Dec
+          2021 - Jul 2023</div>
+        <div class="job-content">
+          <ul>
+            <li>Worked on site reliability and scalability of Endpoint Central Cloud, a popular enterprise endpoint
+              management solution</li>
+            <li>Created Org Based Sync, an optimized locking mechanism that increased cloud inventory processing
+              throughput by 700%</li>
+            <li>Diagnozed Java server site reliability events in a distributed architecture, managed Kafka queues,
+              optimized SQL queries</li>
+            <li>Developed internal tool to create database indexes, indexed a frequently queried table to increase query
+              speeds by 200%</li>
+            <li>Spearheaded research into transitioning analytical tasks from PostgreSQL to Big Data stores, conducted
+              big data knowledge
+              sharing sessions, created a Java framework that serves as a generic abstraction layer over HBase &
+              TimeseriesDB</li>
+            <li>Built secure Jersey REST API endpoints on live product to fetch performance metrics for an internal
+              Kafka monitoring tool</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <div class="job-meta"><b>Android Developer & Researcher</b> @ Samsung &nbsp; | &nbsp; May 2021 - Oct 2021</div>
+        <div class="job-content">
+          <ul>
+            <li>Created an app called Mimic that achieves touch-free gesture-based gaming on Android smartphones using
+              Computer Vision.</li>
+            <li>Employed Java, Android & MLKit. Led a team of 3, wrote a research paper</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section">
+      <div class="section-heading">
+        <span>Education</span>
+        <hr>
+      </div>
+
+      <div class="sub-section">
+        <div class="degree">BTech in Computer Science and Engineering</div>
+        <div class="edu-meta-1">@ Karunya Institute of Technology and Sciences</div>
+        <div class="edu-meta-2">Graduated in 2022 &nbsp; | &nbsp; 9.46 CGPA</div>
+        <div class="edu-meta-3">Coursework: Data Structures & Algorithms, Artificial
+          Intelligence, Linear Algebra, Operating Systems, DBMS, Networks</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">&copy; Jomin Jose</div>
+    <div class="tech-stack">Developed using HTML, CSS, TypeScript & Vite</div>
+  </footer>
+  <div class="dark-light-switch" onclick="toggleDarkLightMode()">
+    <img src="sun.svg" alt="Light Mode" />
+  </div>
+</body>
+
 </html>

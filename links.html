@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portfolio | Link Grid</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+  <style>
+    body {
+      background-image: none !important;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+  </style>
+  <script type="module" defer src="./src/index.ts"></script>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./links.html">Links</a>
+      <a href="./projects.html">Projects</a>
+      <a href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link">Resume</a>
+    </nav>
+
+    <div class="grid-box">
+      <a class="tile" target="_blank"
+        href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link">
+        <img src="resume.svg" alt="Resume" />
+        <div class="title">Resume</div>
+      </a>
+
+      <a class="tile" target="_blank" href="./projects.html">
+        <img src="rocket.svg" alt="Projects" />
+        <div class="title">Projects</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://www.youtube.com/c/JominJose">
+        <img src="youtube-outline.svg" alt="YouTube" />
+        <div class="title">YouTube</div>
+      </a>
+
+      <a class="tile" target="_blank" href="http://jominjose14.blogspot.com/">
+        <img src="write.svg" alt="Blog" />
+        <div class="title">Blog</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://www.linkedin.com/in/jominjose14/">
+        <img src="linkedin.svg" alt="LinkedIn" />
+        <div class="title">LinkedIn</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://github.com/jominjose14">
+        <img src="github-black.svg" alt="GitHub" />
+        <div class="title">GitHub</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://x.com/jomin_jose14">
+        <img src="x.svg" alt="X (Twitter)" />
+        <div class="title">X.com</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://www.instagram.com/jomin__jose/">
+        <img src="instagram.svg" alt="Instagram" />
+        <div class="title">Instagram (Personal)</div>
+      </a>
+
+      <a class="tile" target="_blank" href="https://www.instagram.com/jominjose7/">
+        <img src="music.svg" alt="Instagram Music" />
+        <div class="title">Instagram (Music)</div>
+      </a>
+    </div>
+  </main>
+  <div class="dark-light-switch" onclick="toggleDarkLightMode()">
+    <img src="sun.svg" alt="Light Mode" />
+  </div>
+</body>
+
+</html>

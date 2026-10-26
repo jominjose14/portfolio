@@ -2,10 +2,11 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "description": "Showcases a profile with links to various categories of activities & projects",
+  "description": "Showcases a professional profile",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-team": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -16,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jominjose14/Portfolio.git"
+    "url": "git+https://github.com/jominjose14/portfolio.git"
   },
   "author": "jomin",
   "license": "ISC",
-  "homepage": "https://jominjose14.github.io/Portfolio"
+  "homepage": "https://jominjose14.github.io/portfolio"
 }

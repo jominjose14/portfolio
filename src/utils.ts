@@ -28,3 +28,30 @@ function toggleDarkLightMode() {
     document.documentElement.classList.toggle("dark-mode");
     document.documentElement.classList.toggle("light-mode");
 }
+
+export function switchNavTab() {
+    const $nav = document.querySelector("nav");
+    if(!$nav) return;
+
+    const [home, links, projects, resume] = [...$nav.children];
+    const pageName = window.location.href.split("/portfolio/")[1];
+    console.log("pageName", pageName);
+
+    switch(pageName) {
+        case "links.html": {
+            links.classList.add("selected");
+            break;
+        }
+
+        case "projects.html": {
+            projects.classList.add("selected");
+            break;
+        }
+
+        case "":
+        default: {
+            home.classList.add("selected");
+            break;
+        }
+    }
+}

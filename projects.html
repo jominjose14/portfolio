@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio | Projects</title>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/style.css" />
-    <script type="module" defer src="./src/projects.ts"></script>
-  </head>
 
-  <body>
-    <main>
-      <header>Projects</header>
-      <div class="grid-box"></div>
-    </main>
+<head>
+  <title>Portfolio | Projects</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+  <style>
+    body {
+      background-image: none !important;
+    }
 
-    <div class="dark-light-switch">
-      <img src="sun.svg" alt="Light Mode" />
-    </div>
+    nav {
+      margin-bottom: 2rem;
+    }
+  </style>
+  <script type="module" defer src="./src/projects.ts"></script>
+</head>
 
-    <dialog id="project-dialog">
-      <span class="dialog-close">&times;</span>
-      <div class="dialog-main">
-        <div class="project-box">
-          <div class="img-box"></div>
-          <div class="about"></div>
-          <div class="tech"></div>
-        </div>
-        <div class="links"></div>
+<body>
+  <main>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./links.html">Links</a>
+      <a href="./projects.html">Projects</a>
+      <a href="https://drive.google.com/file/d/15qMAokNxn0Z4pHbRokuIaR5fCrnw6kd9/view?usp=share_link">Resume</a>
+    </nav>
+    <div class="grid-box"></div>
+  </main>
+
+  <div class="dark-light-switch">
+    <img src="sun.svg" alt="Light Mode" />
+  </div>
+
+  <dialog id="project-dialog">
+    <span class="dialog-close">&times;</span>
+    <div class="dialog-main">
+      <div class="project-box">
+        <div class="img-box"></div>
+        <div class="about"></div>
+        <div class="tech"></div>
       </div>
-    </dialog>
+      <div class="links"></div>
+    </div>
+  </dialog>
 
-    <template id="project-link-template">
-      <a href="https://github.com/jominjose14/peerpedia" target="_blank">
-        <img src="github.svg" alt="Source Code" />
-        <span>Source Code</span>
-      </a>
-    </template>
-  </body>
+  <template id="project-link-template">
+    <a href="https://github.com/jominjose14/peerpedia" target="_blank">
+      <img src="github.svg" alt="Source Code" />
+      <span>Source Code</span>
+    </a>
+  </template>
+</body>
+
 </html>

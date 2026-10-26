@@ -1,10 +1,11 @@
 import './style.css';
 import { projects } from "./projects-list.js";
-import { initDarkLightMode } from "./utils.js";
+import { initDarkLightMode, switchNavTab } from "./utils.js";
 import type { Project, ProjectTile } from './types.js';
 
 window.onload = (): void => {
     initDarkLightMode();
+    switchNavTab();
     loadProjects();
     addEventListeners();
     autoOpenModal();
