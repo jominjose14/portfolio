@@ -14,9 +14,19 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css" />
   <style>
-    body {
-      background-image: none !important;
+    :root {
+      &.light-mode {
+        --tile-bg: oklch(98% 0 0) !important;
+      }
+
+      &.dark-mode {
+        --tile-bg: oklch(22% 0 0) !important;
+      }
     }
+
+    /* body {
+      background-image: none !important;
+    } */
 
     nav {
       margin-bottom: 2rem;

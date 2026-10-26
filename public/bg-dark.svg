@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <polygon fill="#1b1b1b" fill-rule="evenodd" points="8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4" />
+<svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <rect x="0" y="0" width="960" height="540" fill="oklch(18% 0 0)"></rect>
+    <g transform="translate(348.19574775901623 207.4744305500503)">
+        <path
+            d="M573.4 -338.3C689.4 -311.8 692.8 -76.5 583.4 25.1C474 126.6 252 94.4 83.3 177.2C-85.3 260.1 -200.6 458 -284.9 465.7C-369.2 473.5 -422.5 291 -389.5 166C-356.5 41 -237.3 -26.6 -158 -44.7C-78.7 -62.8 -39.4 -31.4 94.7 -106.9C228.7 -182.4 457.4 -364.7 573.4 -338.3"
+            fill="oklch(15% 0 0)"></path>
+    </g>
 </svg>
