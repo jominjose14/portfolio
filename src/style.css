@@ -48,11 +48,11 @@ body {
 
 body {
     .light-mode & {
-        background-image: url("bg-light.svg");
+        background-image: url("/portfolio/bg-light.svg");
     }
 
     .dark-mode & {
-        background-image: url("bg-dark.svg");
+        background-image: url("/portfolio/bg-dark.svg");
         /* background-image: linear-gradient(to bottom left, oklch(22% 0 0) 15%, oklch(16% 0 0) 85%, oklch(22% 0 0)); */
     }
 
