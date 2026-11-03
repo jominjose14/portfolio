@@ -58,7 +58,7 @@ export function switchNavTab() {
     const $nav = document.querySelector("nav");
     if(!$nav) return;
 
-    const [home, links, projects, resume] = [...$nav.children];
+    const [home, links, projects ] = [...$nav.children]; // ignore resume element
     const pageName = window.location.href.split("/portfolio/")[1];
     console.log("pageName", pageName);
 
