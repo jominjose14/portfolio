@@ -458,10 +458,11 @@ section {
 .projects-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1.9rem 1.75rem;
 
     @media (min-width: 768px) {
+        gap: 2rem;
         padding: 1.9rem 2.5rem;
     }
 
