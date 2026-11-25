@@ -3,13 +3,13 @@ type Theme = "light" | "dark";
 const getStoredOrOSTheme = (): Theme => {
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) {
-      return savedTheme;
+        return savedTheme;
     }
-    
+
     // fallback based on OS preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     return prefersDark ? 'dark' : 'light';
-  };
+};
 
 export function initDarkLightMode(): void {
     const theme = getStoredOrOSTheme();
@@ -56,27 +56,17 @@ function toggleDarkLightMode() {
 
 export function switchNavTab() {
     const $nav = document.querySelector("nav");
-    if(!$nav) return;
+    if (!$nav) return;
 
-    const [home, links, projects ] = [...$nav.children]; // ignore resume element
+    const [home, links, projects] = [...$nav.children]; // ignore resume element
     const pageName = window.location.href.split("/portfolio/")[1];
-    console.log("pageName", pageName);
+    // console.log("pageName", pageName);
 
-    switch(pageName) {
-        case "links.html": {
-            links.classList.add("selected");
-            break;
-        }
-
-        case "projects.html": {
-            projects.classList.add("selected");
-            break;
-        }
-
-        case "":
-        default: {
-            home.classList.add("selected");
-            break;
-        }
+    let selected = home;
+    if (pageName.startsWith("links.html")) {
+        selected = links;
+    } else if (pageName.startsWith("projects.html")) {
+        selected = projects;
     }
+    selected.classList.add("selected");
 }
